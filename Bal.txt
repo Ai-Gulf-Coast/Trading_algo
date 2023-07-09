@@ -1,0 +1,11 @@
+USDT = 57.1734374 / $57.173
+BTC = 0.00174 / $52.78
+
+
+new bal
+USDT = 27.1863374
+BTC  = 82.81
+
+transaction 29.98710000
+
+{'symbol': 'BTCUSDT', 'orderId': 1041627229, 'orderListId': -1, 'clientOrderId': 'ewShN1sJcQDzaYRujAF5av', 'transactTime': 1688863933898, 'price': '0.00000000', 'origQty': '0.00099000', 'executedQty': '0.00099000', 'cummulativeQuoteQty': '29.98710000', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': 1688863933898, 'fills': [{'price': '30290.00000000', 'qty': '0.00099000', 'commission': '0.00000000', 'commissionAsset': 'BNB', 'tradeId': 24189051}], 'selfTradePreventionMode': 'EXPIRE_MAKER'}
