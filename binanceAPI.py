@@ -10,9 +10,27 @@ api_key = os.environ.get('BINANCE_API_KEY_TEST')
 api_secret = os.environ.get('BINANCE_API_SECRET_TEST')
 client = Client(api_key,api_secret, tld='us')
 
+
+def getFeeForPair():
+    symbol = 'USDT'  # Replace with your desired trading pair
+    fees = client.get_trade_fee(symbol='BNBBTC')
+    print(fees)
+    # Extract the maker and taker fees
+
+    '''
+    maker_fee = float(fees['tradeFee'][0]['maker'])
+    taker_fee = float(fees['tradeFee'][0]['taker'])
+
+    print(f"Maker fee: {maker_fee}%")
+    print(f"Taker fee: {taker_fee}%")
+    '''
+
+getFeeForPair()
+
 def getBalance(symbol):
     balance = float(client.get_asset_balance(asset=symbol)['free'])
     return balance
+
 
 def makeBuyOrder(amount, all):
     btc_quantity = 0
@@ -33,7 +51,6 @@ def makeBuyOrder(amount, all):
             quantity=btc_quantity
         )
     return order
-    
 
 
 def makeSellOrder(amount, all):
